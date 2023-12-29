@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:iosapp/HomeScreen.dart';
+import 'package:iosapp/Browse.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: HomeScreen(),
+      home: Browse(),
     );
   }
 }
