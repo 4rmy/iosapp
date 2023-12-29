@@ -100,7 +100,7 @@ class Browse extends StatelessWidget {
                         fontStyle: FontStyle.normal,
                       ),
                     ),
-                    textColor: Color(0xff000000),
+                    textColor: Color(0xffffffff),
                     height: MediaQuery.of(context).size.height * 0.07,
                     minWidth: MediaQuery.of(context).size.width * 0.33,
                   ),
@@ -108,7 +108,15 @@ class Browse extends StatelessWidget {
                     onPressed: () {
                       Navigator.pushReplacement(
                         context,
-                        MaterialPageRoute(builder: (context) => MyApps()),
+                        PageRouteBuilder(
+                          pageBuilder: (context, animation, secondaryAnimation) {
+                            return MyApps();
+                          },
+                          transitionsBuilder: (context, animation, secondaryAnimation, child) {
+                            return child;
+                          },
+                          transitionDuration: Duration(seconds: 0), // Set the duration to 0 seconds
+                        ),
                       );
                     },
                     color: Color(0xffffffff),

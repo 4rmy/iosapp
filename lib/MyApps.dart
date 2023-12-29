@@ -87,7 +87,15 @@ class MyApps extends StatelessWidget {
                     onPressed: () {
                       Navigator.pushReplacement(
                         context,
-                        MaterialPageRoute(builder: (context) => Browse()),
+                        PageRouteBuilder(
+                          pageBuilder: (context, animation, secondaryAnimation) {
+                            return Browse();
+                          },
+                          transitionsBuilder: (context, animation, secondaryAnimation, child) {
+                            return child;
+                          },
+                          transitionDuration: Duration(seconds: 0), // Set the duration to 0 seconds
+                        ),
                       );
                     },
                     color: Color(0xffffffff),
@@ -126,7 +134,7 @@ class MyApps extends StatelessWidget {
                         fontStyle: FontStyle.normal,
                       ),
                     ),
-                    textColor: Color(0xff000000),
+                    textColor: Color(0xffffffff),
                     height: MediaQuery.of(context).size.height * 0.07,
                     minWidth: MediaQuery.of(context).size.width * 0.33,
                   ),
