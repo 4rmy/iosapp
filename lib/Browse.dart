@@ -18,7 +18,6 @@ decoration: BoxDecoration(
 color:Color(0x1f000000),
 shape:BoxShape.rectangle,
 borderRadius:BorderRadius.zero,
-border:Border.all(color:Color(0x4d9e9e9e),width:1),
 ),
 child:
 
@@ -44,7 +43,6 @@ decoration: BoxDecoration(
 color:Color(0xff3a226a),
 shape:BoxShape.rectangle,
 borderRadius:BorderRadius.zero,
-border:Border.all(color:Color(0x4d9e9e9e),width:0),
 ),
 child:
 Align(
@@ -71,7 +69,6 @@ decoration: BoxDecoration(
 color:Color(0x1f000000),
 shape:BoxShape.rectangle,
 borderRadius:BorderRadius.zero,
-border:Border.all(color:Color(0x4d9e9e9e),width:1),
 ),
 child:
 Align(
@@ -85,7 +82,6 @@ decoration: BoxDecoration(
 color:Color(0x00ffffff),
 shape:BoxShape.rectangle,
 borderRadius:BorderRadius.zero,
-border:Border.all(color:Color(0x4d9e9e9e),width:0),
 ),
 child:
 Align(
@@ -178,7 +174,9 @@ minWidth:MediaQuery.of(context).size.width * 0.25,
 ],),),),
 ),),
 ),
-Row(
+Padding(
+padding:EdgeInsets.fromLTRB(0, 5, 0, 0),
+child:Row(
 mainAxisAlignment:MainAxisAlignment.spaceEvenly,
 crossAxisAlignment:CrossAxisAlignment.center,
 mainAxisSize:MainAxisSize.max,
@@ -186,7 +184,7 @@ children:[
 
 MaterialButton(
 onPressed:(){},
-color:Color(0xffffffff),
+color:Color.fromARGB(255, 123, 45, 187),
 elevation:0,
 shape:RoundedRectangleBorder(
 borderRadius:BorderRadius.circular(8.0),
@@ -197,7 +195,7 @@ child:Text("Browse", style: TextStyle( fontSize:14,
 fontWeight:FontWeight.w400,
 fontStyle:FontStyle.normal,
 ),),
-textColor:Color(0xff000000),
+textColor:Color.fromARGB(255, 255, 255, 255),
 height:MediaQuery.of(context).size.height * 0.07,
 minWidth:MediaQuery.of(context).size.width * 0.33,
 ),
@@ -235,7 +233,7 @@ textColor:Color(0xff000000),
 height:MediaQuery.of(context).size.height * 0.07,
 minWidth:MediaQuery.of(context).size.width * 0.33,
 ),
-],),
+],),),
 ],),),
 ],),
 ),
