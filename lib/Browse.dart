@@ -106,7 +106,7 @@ class Browse extends StatelessWidget {
                   ),
                   MaterialButton(
                     onPressed: () {
-                      Navigator.push(
+                      Navigator.pushReplacement(
                         context,
                         MaterialPageRoute(builder: (context) => MyApps()),
                       );

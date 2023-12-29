@@ -85,7 +85,7 @@ class MyApps extends StatelessWidget {
                 children: [
                   MaterialButton(
                     onPressed: () {
-                      Navigator.push(
+                      Navigator.pushReplacement(
                         context,
                         MaterialPageRoute(builder: (context) => Browse()),
                       );
